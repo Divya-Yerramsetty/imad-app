@@ -14,4 +14,7 @@ button.onclick = function() {
             }
         }
     };
+    //Make a request
+    request.open('GET', 'http://divya15y.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
