@@ -18,3 +18,16 @@ button.onclick = function() {
     request.open('GET', 'http://divya15y.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+
+var commentInput = document.getElementById('comment');
+var comment = commentInput.value;
+var submit = document.getElementById('submit_btn');
+submit.onclick = function() {
+    var comments = ['comment1','comment2','comment3'];
+    var list ='';
+    for (var i=0; i<comments.length; i++) {
+        list += '<li>' + comments[i] + '</li>';
+    }
+    var ul = document.getElementById('commentslist');
+    ul.innerHTML = list;
+};
